@@ -1,15 +1,10 @@
-html{
-	box-sizing: border-box;
-}
-*,*::before,*::after{
-	box-sizing: inherit;
-}
+@import '_vars';
 
-body{
-	background-color: yellow;
+html {
+  box-sizing: border-box;
 }
-
-.box{
-	display: flex;
-	transition: all 0.3s;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
