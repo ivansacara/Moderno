@@ -71,12 +71,12 @@
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
   &-text {
     margin-bottom: 50px;
-    font-weight: 500;
+    @include f500;
     font-size: 20px;
     line-height: 30px;
   }
@@ -92,12 +92,12 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
     button {
@@ -166,20 +166,20 @@
     max-width: 310px;
   }
   &-title {
-    font-weight: 700;
+    @include f700;
     color: $bg;
     font-style: 18px;
     display: block;
   }
   &-category {
-    font-weight: 500;
+    @include f500;
     display: block;
     font-size: 14px;
     color: $green;
   }
   &-price {
     font-size: 20px;
-    font-weight: 700;
+    @include f700;
     color: $bg;
   }
   &-info {
@@ -205,7 +205,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
   }
   &-star {
@@ -261,5 +261,58 @@
         outline: none;
       }
     }
+  }
+}
+
+//Section Advatages
+
+.advantages {
+  background-color: $bg;
+  padding: 110px 0;
+}
+.advantages_title {
+  color: #fff;
+}
+
+.advantages_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages_item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0px 15px;
+  transition: all 0.5s;
+  &:hover {
+    .advantages_item-images {
+      background-color: $green;
+      g {
+        fill: #fff;
+        transition: all 0.5s;
+      }
+    }
+    .advantages_item-title {
+      color: $green;
+    }
+  }
+  &-images {
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 15px;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all 0.5s;
+  }
+  &-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #fff;
+    @include f500;
+    transition: all 0.5s;
+  }
+  &-text {
+    font-size: 15px;
   }
 }
