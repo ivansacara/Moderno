@@ -353,3 +353,35 @@
     background-color: #fff;
   }
 }
+
+//Section Tutorial
+
+.tutorial {
+  padding: 60px 0px 120px;
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+
+.tutorial_item {
+  margin-top: 30px;
+  &-images {
+    min-height: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    @include f700;
+    color: $bg;
+    text-align: center;
+    padding: 30px;
+  }
+}
