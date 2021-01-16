@@ -757,16 +757,16 @@
 }
 
 .link-twitter {
-  background-position: -29px -0;
+  background-position: -28px -0;
 }
 .link-youtube {
-  background-position: -0 -29px;
+  background-position: -0 -28px;
 }
 .link-linledin {
-  background-position: -29px -29px;
+  background-position: -29px -28px;
 }
 .link-pinterest {
-  background-position: -59px -0;
+  background-position: -57px -0;
 }
 
 .footer_form-title {
@@ -1170,6 +1170,330 @@ button.icon-unsorted {
       margin-left: auto;
       margin-right: 30px;
     }
+  }
+}
+
+//Section Producr One
+.product_breadcrumbs {
+  background-color: $grey;
+}
+.product-one {
+  padding-bottom: 100px;
+  background-color: $grey;
+  &_inner {
+    display: flex;
+  }
+  &_content {
+    margin-right: 31px;
+    max-width: 870px;
+  }
+  &_images-inner {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+  }
+  &_images {
+    max-width: 829px;
+    width: 100%;
+    height: 422px;
+    background-image: url(../images/product_one/product_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &_title {
+    font-size: 30px;
+    color: $bg;
+    line-height: 40px;
+    @include f500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  &_text {
+    font-size: 16px;
+    color: #707070;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  &_box {
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  &_link {
+    a {
+      color: #fff;
+      padding: 16px 8px;
+      width: 150px;
+      color: $grey;
+      font-size: 14px;
+      & + a {
+        margin-left: 20px;
+      }
+    }
+    .link-live {
+      background-color: $red;
+    }
+    .link-screenshots {
+      background-color: #455a64;
+    }
+    .link-documentation {
+      background-color: $green;
+    }
+  }
+  &_social {
+    a {
+      width: 54px;
+      height: 50px;
+      position: relative;
+      & + a {
+        margin-right: 3px;
+      }
+      &::before {
+        font-size: 18px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .icon-facebook {
+      background-color: #6370b6;
+    }
+    .icon-twitter {
+      background-color: #64b5f6;
+    }
+    .icon-linkedin {
+      background-color: #4f71ce;
+    }
+    .icon-pinterest-p {
+      background-color: #d32f2f;
+    }
+  }
+}
+
+.product-one {
+  &_tabs {
+    margin-bottom: 55px;
+  }
+  .tabs {
+    display: flex;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    .tab {
+      width: 100%;
+      background-color: #fff;
+      font-size: 16px;
+      color: #78909c;
+      padding: 20px 0px;
+      cursor: pointer;
+      & + .tab {
+        border-left: 1px solid #d7d7d7;
+      }
+    }
+  }
+}
+.tab_content {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-top: none;
+  padding: 30px 50px;
+}
+.tab-item {
+  display: none;
+  &:first-child {
+    display: block;
+  }
+  &_list {
+    font-size: 16px;
+    line-height: 36px;
+    color: #707070;
+    column-count: 2;
+    li {
+      max-width: 270px;
+      width: 100%;
+    }
+  }
+}
+
+.product-one {
+  &_more-title {
+    font-size: 18px;
+    @include f500;
+    color: $bg;
+    padding: 18px 25px;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    margin-bottom: 28px;
+  }
+  &_more-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .productmini {
+    margin-bottom: 27px;
+    display: flex;
+    height: 90px;
+    max-width: 270px;
+    width: 100%;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    &_images {
+      width: 100px;
+      height: 90px;
+      margin-right: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &_name {
+      @include f500;
+      font-size: 14px;
+      color: $bg;
+    }
+    &_thema {
+      color: $green;
+      font-size: 12px;
+    }
+    &_price {
+      @include f700;
+      font-size: 18px;
+      color: $bg;
+    }
+  }
+}
+
+.price_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.price_product {
+  font-size: 22px;
+  @include f500;
+  color: $red;
+}
+.product_price {
+  button {
+    margin-bottom: 7px;
+    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+    border: none;
+    background-color: $text;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif !important;
+    text-align: center;
+    width: 100%;
+    padding: 17px 5px 15px;
+    cursor: pointer;
+    &::before {
+      margin-right: 9px;
+      font-weight: 400;
+      font-family: "icomoon";
+    }
+  }
+  .icon-heart-o {
+    background-color: #42a5f5;
+  }
+  .icon-shopping-cart {
+    background-color: $green;
+  }
+}
+
+.product-author_box {
+  display: flex;
+  padding: 25px 0;
+}
+.author_avatar {
+  margin-right: 14px;
+}
+
+.author_name {
+  font-size: 18px;
+  color: $bg;
+  margin-bottom: 10px;
+  line-height: 16px;
+}
+.authot_link {
+  font-size: 13px;
+  color: #707070;
+  border: 1px solid #d5d5d5;
+  padding: 6px 9px 5px;
+}
+
+.author_awards-list {
+  li {
+    display: inline-block;
+    width: 34px;
+    height: 37px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      right: 0;
+    }
+    & + li {
+      margin-left: 4px;
+    }
+  }
+  .icon-meh-o {
+    background-image: url(../images/awards/yellow.png);
+  }
+  .icon-pagelines {
+    background-image: url(../images/awards/red.png);
+  }
+  .icon-flash {
+    background-image: url(../images/awards/blue.png);
+  }
+  .icon-foursquare {
+    background-image: url(../images/awards/green.png);
+  }
+  .icon-yen {
+    background-image: url(../images/awards/gray.png);
+  }
+}
+
+.aside-item_sales {
+  padding-top: 23px;
+  font-size: 16px;
+  @include f300;
+  color: #707070;
+  span {
+    font-size: 20px;
+    @include f700;
+    color: #263228;
+    padding-right: 14px;
+    &::before {
+      content: "\f07a";
+      font-family: "icomoon";
+      color: #a6b5bb;
+      padding-right: 20px;
+    }
+  }
+}
+.aside-item.sales-number {
+  padding-bottom: 25px;
+}
+
+.aside_information {
+  font-size: 14px;
+  color: #70838d;
+  margin-top: 20px;
+  span {
+    color: $bg;
+    @include f500;
   }
 }
 
