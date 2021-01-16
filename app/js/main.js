@@ -38,6 +38,15 @@ $(function () {
 	});
 
 
+	$('.menu_btn').on('click', function () {
+		$('.menu_list').slideToggle()
+	});
+
+	$('.header_btn-menu').on('click', function () {
+		$('.header_box').toggleClass('active')
+	});
+
+
 	var mixer = mixitup('.products__inner-box');
 
 

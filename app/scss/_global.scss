@@ -30,6 +30,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: $text;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -60,9 +61,6 @@ body {
   .container-fluid {
     padding: 0 15px;
   }
-}
-.page-content {
-  background-color: $grey;
 }
 
 .title {
@@ -106,5 +104,18 @@ body {
     a {
       color: #b0bec5;
     }
+  }
+}
+
+.angle-right {
+  position: relative;
+  padding-left: 15px;
+  &::before {
+    content: "\f105";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: $green;
+    font-size: 14px;
   }
 }

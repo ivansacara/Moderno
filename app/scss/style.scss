@@ -29,7 +29,8 @@
 .header_btn-login {
   background-color: $green;
 }
-.header_btn-register {
+.header_btn-register,
+.header_btn-logout {
   background-color: $red;
   margin-left: 7px;
 }
@@ -53,6 +54,261 @@
       font-size: 14px;
     }
   }
+}
+
+.header_circle {
+  &.active {
+    display: block;
+  }
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  margin-right: 17px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px;
+    font-size: 11px;
+    color: #fff;
+  }
+}
+.header_box {
+  display: flex;
+  align-items: center;
+}
+
+.notification {
+  span {
+    background-color: $yellow;
+  }
+}
+.message {
+  span {
+    background-color: $tomato;
+  }
+}
+.basket {
+  span {
+    background-color: $green;
+  }
+}
+.header_btn-login--off {
+  display: none;
+}
+.header_btn-logout {
+  display: none;
+  &.header_btn-login--on {
+    display: block;
+  }
+}
+
+.user {
+  padding-right: 20px;
+  margin-right: 25px;
+  position: relative;
+  &::before {
+    content: "\f107";
+    font-family: "icomoon";
+    position: absolute;
+    font-size: 16px;
+    color: #707070;
+    top: 0;
+    right: 0;
+  }
+  &_inner {
+    display: flex;
+    align-items: center;
+  }
+  &_images {
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &_info {
+    line-height: 24px;
+    font-size: 14px;
+  }
+  &_name {
+    @include f500;
+    color: #222;
+  }
+  &_money {
+    color: $green;
+    @include f700;
+  }
+}
+.user_box,
+.basket_box,
+.message_box,
+.notification_box {
+  position: relative;
+  height: 90px;
+  margin-top: 40px;
+  &:hover {
+    .user_menu {
+      height: auto;
+      padding: 20px;
+      border-width: 1px;
+      overflow: auto;
+    }
+  }
+}
+.basket_box,
+.message_box,
+.notification_box {
+  margin-top: 55px;
+  &:hover {
+    .header_circle::before {
+      color: $bg;
+    }
+    .circle_menu {
+      overflow: hidden;
+      height: auto;
+    }
+    .circle_item {
+      padding: 23px;
+      border-width: 1px;
+    }
+  }
+}
+.circle_menu {
+  border-top: 1px solid #e0e0e0;
+  position: absolute;
+  top: 62px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.notification_menu,
+.message_menu {
+  .circle_images {
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle_info {
+    line-height: 18px;
+  }
+}
+
+.circle_item {
+  background-color: #fff;
+  border: 0px solid #e0e0e0;
+  border-top: none;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  padding: 0 23px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  width: 269px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 27px;
+    right: 28px;
+    color: #b0bec5;
+    font-size: 16px;
+  }
+}
+.circle_images {
+  margin-right: 15px;
+}
+.circle_info {
+  line-height: 20px;
+  &-name {
+    @include f500;
+    color: $bg;
+  }
+  &-theme {
+    font-size: 12px;
+    color: $green;
+  }
+  &-price {
+    @include f500;
+    font-size: 16px;
+    color: #000;
+  }
+  &-date {
+    font-size: 10px;
+    color: #707070;
+  }
+}
+
+.basket_summ {
+  padding: 20px 16px 12px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+.basket_title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-right: 22px;
+  margin-bottom: 15px;
+  @include f700;
+  font-size: 16px;
+  color: $bg;
+}
+.basket-btn {
+  color: #fff;
+  @include f700;
+  font-size: 14px;
+  padding: 12px 5px;
+  background-color: $green;
+  text-align: center;
+  width: 100px;
+}
+.basket-btn-checkout {
+  width: 123px;
+  margin-left: 6px;
+  background-color: $red;
+}
+.user_menu {
+  border: 0px solid rgb(204, 204, 204);
+  background-color: #fff;
+  padding: 0 20px;
+  width: 158px;
+  position: absolute;
+  top: 69px;
+  left: 0;
+  transition: all 0.3s;
+  height: 0;
+  overflow: hidden;
+  a {
+    color: #546e7a;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}
+.icons_color::before {
+  color: $tomato;
+}
+
+.menu_btn,
+.header_btn-menu {
+  display: none;
 }
 
 //Start Search
@@ -916,3 +1172,5 @@ button.icon-unsorted {
     }
   }
 }
+
+@import "media";
