@@ -106,6 +106,14 @@ body {
     }
   }
 }
+.page-404,
+.about,
+.contact,
+.settings,
+.profile {
+  background-color: $grey;
+  padding-bottom: 150px;
+}
 
 .angle-right {
   position: relative;

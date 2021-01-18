@@ -1610,13 +1610,7 @@ button.icon-unsorted {
 }
 
 //Section PAGE 404
-.page-404,
-.about,
-.contact,
-.settings {
-  background-color: $grey;
-  padding-bottom: 150px;
-}
+
 .page-404_wrapper,
 .about_wrapper,
 .contact_wrapper {
@@ -1890,6 +1884,196 @@ button.icon-unsorted {
     background-color: #f9f9f9;
     height: 40px;
     color: #707070;
+  }
+}
+
+//Section Profile
+.profile {
+  padding: 0;
+}
+.profile_inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.profile_aside {
+  margin-right: 30px;
+  max-width: 270px;
+  width: 100%;
+  & .footer_social-link {
+    margin-bottom: 21px;
+  }
+}
+.profile_content {
+  width: 100%;
+}
+.profile-status {
+  font-size: 13px;
+  color: #707070;
+  border: 1px solid #d5d5d5;
+  padding-left: 25px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    left: 8px;
+    top: 8px;
+  }
+}
+.profile-on {
+  &::before {
+    background-color: $green;
+  }
+}
+.profile-off {
+  &::before {
+    background-color: $red;
+  }
+}
+.profile_aside-btn {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.profile_aside-message {
+  margin-bottom: 17px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  @include f500;
+  background-color: $text;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+  padding: 18px 10px;
+  position: relative;
+  &::before {
+    content: "\f003";
+    position: absolute;
+    font-family: "icomoon";
+    left: 55px;
+  }
+}
+.profile_aside-following {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  @include f700;
+  background-color: $green;
+  box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+  padding: 18px 10px;
+}
+
+.profile_banner {
+  padding: 20px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  margin-bottom: 36px;
+}
+.profile_banner-images {
+  background-image: url(../images/content/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 332px;
+}
+
+.profile_items {
+  display: flex;
+  border: 1px solid #dedede;
+}
+
+.profile_item {
+  width: 25%;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 5px 17px;
+  & + .profile_item {
+    border-left: 1px solid #dedede;
+  }
+}
+
+.profile_item-title {
+  font-size: 14px;
+  color: $bg;
+  @include f500;
+}
+
+.profile_item-content {
+  font-size: 14px;
+  color: #707070;
+  @include f500;
+  &.profile_item-sales {
+    color: $bg;
+  }
+}
+
+.profile_settings {
+  .product-one_tabs.settings_tabs {
+    .tabs span {
+      font-family: "Roboto", sans-serif !important;
+      font-weight: 500;
+      color: #707070;
+      position: relative;
+      &.active::before {
+        color: $green;
+      }
+      &::before {
+        font-family: "icomoon";
+        position: absolute;
+        left: 24;
+        top: 16px;
+        font-size: 14px;
+        color: #d0d0d0;
+      }
+    }
+  }
+}
+.personal_box {
+  background-color: #fff;
+  padding: 35px 40px 25px;
+  border: 1px solid #dedede;
+}
+
+.personal_box-title {
+  font-size: 20px;
+  @include f700;
+  color: $bg;
+  margin-bottom: 25px;
+}
+.personal_box-text {
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 20px;
+    color: #707070;
+  }
+}
+.personal_box-item-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.personal_box-item-name {
+  font-size: 16px;
+  @include f500;
+  font-style: italic;
+  color: $bg;
+}
+.personal_box-item-number {
+  font-size: 16px;
+  @include f700;
+  color: $bg;
+}
+.personal_box-item-line {
+  background-color: #f4f4f4;
+  height: 15px;
+  border-radius: 3px;
+  margin-bottom: 23px;
+  span {
+    display: block;
+    border-radius: 3px;
+    height: 15px;
+    background-color: $green;
   }
 }
 
