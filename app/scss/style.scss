@@ -1286,7 +1286,7 @@ button.icon-unsorted {
   }
 }
 
-//Section Producr One
+//Section Product One
 .product_breadcrumbs {
   background-color: $grey;
 }
@@ -1390,27 +1390,26 @@ button.icon-unsorted {
   }
 }
 
-.product-one {
-  &_tabs {
-    margin-bottom: 55px;
-  }
-  .tabs {
-    display: flex;
-    text-align: center;
-    border: 1px solid #d7d7d7;
-    .tab {
-      width: 100%;
-      background-color: #fff;
-      font-size: 16px;
-      color: #78909c;
-      padding: 20px 0px;
-      cursor: pointer;
-      & + .tab {
-        border-left: 1px solid #d7d7d7;
-      }
+.product-one_tabs {
+  margin-bottom: 55px;
+}
+.tabs {
+  display: flex;
+  text-align: center;
+  border: 1px solid #d7d7d7;
+  .tab {
+    width: 100%;
+    background-color: #fff;
+    font-size: 16px;
+    color: #78909c;
+    padding: 20px 0px;
+    cursor: pointer;
+    & + .tab {
+      border-left: 1px solid #d7d7d7;
     }
   }
 }
+
 .tab_content {
   background-color: #fff;
   border: 1px solid #d7d7d7;
@@ -1613,7 +1612,8 @@ button.icon-unsorted {
 //Section PAGE 404
 .page-404,
 .about,
-.contact {
+.contact,
+.settings {
   background-color: $grey;
   padding-bottom: 150px;
 }
@@ -1806,4 +1806,91 @@ button.icon-unsorted {
     width: 190px;
   }
 }
+
+// Section Settings
+.product-one_tabs.settings_tabs {
+  display: flex;
+  .tabs {
+    display: block;
+    text-align-last: left;
+    max-width: 270px;
+    height: 100%;
+    margin-right: 30px;
+    width: 100%;
+    border: 1px solid #dedede;
+    border-bottom: none;
+    span {
+      display: block;
+      background-color: #fff;
+      border-bottom: 1px solid #dedede;
+      padding: 17px 17px 17px 50px;
+      font-size: 14px;
+      color: #707070;
+      @include f500;
+      &.active {
+        border-bottom: 2px solid $green;
+        color: #37474f;
+        &::before {
+          color: $green;
+        }
+      }
+      &::before {
+        color: #444;
+        left: 24px;
+      }
+    }
+  }
+  .tabs .tab + .tab {
+    border-left: none;
+  }
+  .tab_content {
+    width: 100%;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.page_box {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  min-width: 100%;
+}
+.page_box-title {
+  border-bottom: 1px solid #dedede;
+  padding: 20px 34px;
+  font-size: 24px;
+  @include f500;
+  color: $bg;
+}
+.page_box-content {
+  padding: 30px 35px 80px;
+}
+
+.settings_line {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  label {
+    width: 260px;
+    color: #444;
+  }
+  input {
+    max-width: 540px;
+    width: 100%;
+    border: 1px solid #dedede;
+    background-color: #f9f9f9;
+    height: 40px;
+    color: #000;
+    padding: 0px 10px;
+  }
+  select {
+    max-width: 540px;
+    width: 100%;
+    border: 1px solid #dedede;
+    background-color: #f9f9f9;
+    height: 40px;
+    color: #707070;
+  }
+}
+
 @import "media";
