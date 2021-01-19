@@ -314,6 +314,7 @@
 //Section Login
 
 #modal {
+  display: none;
   background-color: $green;
   max-width: 730px;
   width: 100%;
@@ -328,7 +329,7 @@
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-.ligin_wrapper {
+.login_wrapper {
   form {
     max-width: 400px;
     margin: 0 auto;
@@ -1486,6 +1487,37 @@ button.icon-unsorted {
   display: flex;
   justify-content: space-between;
   padding: 30px 0px;
+  .jq-selectbox__select {
+    height: 27px;
+    padding: 0 29px 0 10px;
+    border: 1px solid #d5d5d5;
+    border-bottom-color: none;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: none;
+    font-size: 13px;
+    line-height: 27px;
+    font-family: "Roboto", sans-serif;
+    color: #70838d;
+    text-shadow: none;
+  }
+  .jq-selectbox__select-text {
+    color: #70838d;
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0px;
+    right: 20px;
+    font-size: 15px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+      color: $green;
+    }
+  }
 }
 .price_product {
   font-size: 22px;
@@ -1865,11 +1897,11 @@ button.icon-unsorted {
   display: flex;
   align-items: center;
   label {
-    width: 260px;
+    min-width: 232px;
+    margin-right: 30px;
     color: #444;
   }
   input {
-    max-width: 540px;
     width: 100%;
     border: 1px solid #dedede;
     background-color: #f9f9f9;
@@ -1878,12 +1910,42 @@ button.icon-unsorted {
     padding: 0px 10px;
   }
   select {
-    max-width: 540px;
     width: 100%;
     border: 1px solid #dedede;
     background-color: #f9f9f9;
     height: 40px;
     color: #707070;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 45px 0 10px;
+    border: 1px solid #dedede;
+    border-bottom-color: #dedede;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    color: #707070;
+    text-shadow: none;
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0px;
+    right: 20px;
+    font-size: 15px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
   }
 }
 
@@ -2077,4 +2139,267 @@ button.icon-unsorted {
   }
 }
 
+//Section Upload
+.upload {
+  padding-bottom: 100px;
+}
+.upload_inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  &-title {
+    font-size: 24px;
+    @include f500;
+    color: $bg;
+    padding: 16px 35px 18px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #d7d7d7;
+  }
+  &-content {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+    button {
+      color: #fff;
+      background-color: $green;
+      border: none;
+      padding: 15px 35px;
+      margin-left: 175px;
+      cursor: pointer;
+    }
+  }
+}
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+  label {
+    min-width: 175px;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: #444444;
+    span {
+      color: $green;
+    }
+  }
+  select,
+  input,
+  textarea {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+    &::placeholder {
+      color: #707070;
+    }
+    button {
+      margin-top: 5px;
+    }
+  }
+  textarea {
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  .jq-file {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+  }
+  .jq-file__name {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 110px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #707070;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+  }
+  input[type="file"] {
+    outline: none;
+  }
+  .jq-file__browse {
+    top: 6px;
+    right: auto;
+    left: 9px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 24px;
+    border-left: none;
+    border: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    color: #444;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0px;
+    right: 20px;
+    font-size: 15px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__dropdown {
+    top: 38px;
+    bottom: 42px;
+  }
+}
+
+//Section Withdrawals
+.withdrawals_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.withdrawals_col {
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  height: 100%;
+  & + & {
+    margin-left: 30px;
+  }
+}
+.withdrawals_title {
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+  font-size: 24px;
+  @include f500;
+}
+.withdrawals_content {
+  padding-left: 35px;
+  padding-right: 40px;
+  button {
+    margin-bottom: 50px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 35px;
+    cursor: pointer;
+  }
+}
+.withdrawals_form-line {
+  margin-bottom: 25px;
+  label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include f500;
+    margin-bottom: 15px;
+    color: $bg;
+    span {
+      color: $green;
+    }
+  }
+  input,
+  select {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0px 18px;
+    &::placeholder {
+      color: #707070;
+    }
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0px 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0px;
+    right: 20px;
+    font-size: 15px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+    }
+  }
+  .jq-selectbox__dropdown {
+    top: 37px;
+  }
+}
+
+.withdrawals_content-items {
+  padding-bottom: 35px;
+}
+.withdrawals_content-item {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  font-size: 13px;
+  @include f500;
+  color: $bg;
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+}
+
+.withdrawals_content-date {
+  width: 154px;
+  padding-left: 20px;
+}
+.withdrawals_content-email {
+  width: 180px;
+}
+.withdrawals_content-price {
+  width: 70px;
+  @include f700;
+}
+.withdrawals_content-status {
+  width: 88px;
+  @include f700;
+  &.withdrawals_content-paid {
+    color: $green;
+  }
+}
 @import "media";
